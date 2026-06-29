@@ -1,0 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* --- LIGHT MODE (Default): White & Dark Maroon --- */
+  :root {
+    --background: #ffffff; /* White */
+    --foreground: #1a1a1a; /* Dark Gray / Black */
+    --foreground-muted: #52525b;
+
+    /* Brand Colors - Clinic Palette */
+    --primary: #6c1b20; /* Dark Maroon - Professional contrast on white */
+    --secondary: #ab262b; /* Bright Red */
+    --accent-blue: #ab262b; /* Mapped to Bright Red to keep variable name intact */
+
+    /* UI Elements */
+    --border-color: rgba(26, 26, 26, 0.1);
+    --card-bg: #fafafa;
+    --grid-line: rgba(26, 26, 26, 0.05);
+    --spotlight-opacity: 0.15;
+
+    /* Footer Specific */
+    --footer-bg: #f4f4f5;
+
+    /* Logo Colors */
+    --logo-base: #1a1a1a;
+    --logo-mongo-green: #6c1b20;
+    --logo-upwork-green: #ab262b;
+    --logo-politico-red: #ab262b;
+
+    /* Gradients */
+    --card-gradient-start: #ffffff;
+    --card-gradient-end: #f4f4f5;
+
+    /* Hero Spotlight Gradient */
+    --hero-from: #f8ecec; /* Very light maroon wash */
+    --hero-via: #ffffff;
+    --hero-to: #ffffff;
+
+    /* --- LEAD MAGNET SECTION --- */
+    --lead-from: #f5e6e6; /* Light red/maroon tint */
+    --lead-via: #ffffff;
+    --lead-to: #ffffff;
+    --lead-glow: rgba(108, 27, 32, 0.1); /* Subtle Dark Maroon glow */
+
+    /* Overlay Gradients */
+    --overlay-gradient-start: rgba(255, 255, 255, 0.8);
+    --overlay-gradient-end: rgba(255, 255, 255, 0.9);
+
+    /* Blog Overlay */
+    --image-overlay: rgba(108, 27, 32, 0.8); /* Dark Maroon overlay */
+  }
+
+  /* --- DARK MODE: Dark Gray & Bright Red --- */
+  [data-theme="dark"] {
+    --background: #1a1a1a; /* Dark Gray / Black */
+    --foreground: #ffffff; /* White */
+    --foreground-muted: #a1a1aa;
+
+    /* Brand Colors - Clinic Palette */
+    --primary: #ab262b; /* Bright Red - Pops on dark background */
+    --secondary: #6c1b20; /* Dark Maroon / Burgundy */
+    --accent-blue: #ab262b;
+
+    /* UI Elements */
+    --border-color: rgba(255, 255, 255, 0.15);
+    --card-bg: #222222;
+    --grid-line: rgba(255, 255, 255, 0.05);
+    --spotlight-opacity: 0.1;
+
+    /* Footer Specific */
+    --footer-bg: #111111;
+
+    /* Logo Colors */
+    --logo-base: #ffffff;
+    --logo-mongo-green: #ffffff;
+    --logo-upwork-green: #ffffff;
+    --logo-politico-red: #ffffff;
+
+    /* Gradients */
+    --card-gradient-start: #2a2a2a;
+    --card-gradient-end: #1a1a1a;
+
+    /* Hero Spotlight Gradient */
+    --hero-from: #3a1618; /* Deep maroon tint fading into black */
+    --hero-via: #1a1a1a;
+    --hero-to: #1a1a1a;
+
+    /* --- LEAD MAGNET SECTION --- */
+    --lead-from: #2d1618;
+    --lead-via: #1a1a1a;
+    --lead-to: #1a1a1a;
+    --lead-glow: rgba(171, 38, 43, 0.15); /* Bright Red glow */
+
+    /* Overlay Gradients */
+    --overlay-gradient-start: rgba(26, 26, 26, 0.8);
+    --overlay-gradient-end: rgba(26, 26, 26, 0.9);
+
+    /* Blog Overlay */
+    --image-overlay: rgba(108, 27, 32, 0.8);
+  }
+}
+
+/* Smooth transitions for theme switching */
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
